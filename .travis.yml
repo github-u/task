@@ -14,5 +14,6 @@ before_install:
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 after_success:
 - chmod 600 ~/.ssh/id_rsa
-- ssh admin@118.89.221.114 -o StrictHostKeyChecking=no 'cat deploy >> ~/deploy.txt'
+- scp /home/travis/build/github-u/task/xxl-job-admin/target/xxl-job-admin-2.2.0-SNAPSHOT.jar admin@@118.89.221.114:~/task/
+- ssh admin@118.89.221.114 -o StrictHostKeyChecking=no '~/task/deploy.sh'
 
