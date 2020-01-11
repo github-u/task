@@ -388,7 +388,3 @@ else
     echo "Illegal order : $ORDER, please check your command"
     exit $RC_ILLEGAL_ORDER
 fi
-
-
-
-
