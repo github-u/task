@@ -14,4 +14,4 @@ after_success:
 - ssh admin@118.89.221.114 -o StrictHostKeyChecking=no 'cat deploy >> ~/deploy.txt'
 before_install:
 - openssl aes-256-cbc -K $encrypted_08295f691dea_key -iv $encrypted_08295f691dea_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
