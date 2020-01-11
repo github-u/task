@@ -15,3 +15,4 @@ before_install:
 after_success:
 - chmod 600 ~/.ssh/id_rsa
 - ssh admin@118.89.221.114 -o StrictHostKeyChecking=no 'cat deploy >> ~/deploy.txt'
+
