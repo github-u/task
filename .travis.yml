@@ -11,8 +11,7 @@ addons:
   - 118.89.221.114:22
 after_success:
 - chmod 600 ~/.ssh/id_rsa
-- scp /home/travis/build/github-u/task/xxl-job-admin/target/xxl-job-admin-2.2.0-SNAPSHOT.jar admin@118.89.221.114:~/task/
-- ssh admin@118.89.221.114 -o StrictHostKeyChecking=no '~/task/deploy.sh'
+- ssh admin@118.89.221.114 -o StrictHostKeyChecking=no 'chmod u+x ~/git-repositories/intergration/xxl_job_start.sh &  ~/git-repositories/intergration/xxl_job_start.sh >> ~/task/task.log 2>&1 &'
 before_install:
 - openssl aes-256-cbc -K $encrypted_08295f691dea_key -iv $encrypted_08295f691dea_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
