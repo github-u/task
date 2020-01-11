@@ -1,4 +1,4 @@
-#
+﻿#
 # XXL-JOB v2.2.0-SNAPSHOT
 # Copyright (c) 2015-present, xuxueli.
 
